@@ -35,3 +35,13 @@ hs.hotkey.bind({"cmd", "alt"}, "Right", function()
   local nextScreen = win:screen():next()
   win:moveToScreen(nextScreen, 0)
 end)
+
+-- home 키 매핑
+hs.hotkey.bind({}, "home", function()
+  hs.eventtap.keyStroke({"cmd"}, "left")
+end)
+
+-- end 키 매핑
+hs.hotkey.bind({}, "end", function()
+  hs.eventtap.keyStroke({"cmd"}, "right")
+end)
